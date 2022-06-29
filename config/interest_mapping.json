@@ -1,0 +1,21 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "created_at": {
+        "type": "date"
+      },
+      "updated_at": {
+        "type": "date"
+      },
+      "name": {
+        "type": "text"
+      },
+      "geofence": {
+        "type": "geo_shape"
+      }
+    }
+  }
+}

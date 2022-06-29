@@ -1,0 +1,16 @@
+development:
+  clients:
+    default:
+      database: <%= ENV['MONGODB_NAME'] %>
+      hosts:
+        - <%= ENV['MONGODB_HOST'] %>
+production:
+  clients:
+    default:
+      database: <%= ENV['MONGODB_NAME'] %>
+      hosts:
+        - <%= ENV['MONGODB_HOST'] %>
+      options:
+        user: <%= ENV['MONGODB_USERNAME'] %>
+        password: <%= ENV['MONGODB_PASSWORD'] %>
+        max_pool_size: 25

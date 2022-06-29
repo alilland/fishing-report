@@ -1,0 +1,36 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "created_at": {
+        "type": "date"
+      },
+      "updated_at": {
+        "type": "date"
+      },
+      "state": {
+        "type": "text"
+      },
+      "date": {
+        "type": "date"
+      },
+      "county": {
+        "type": "text"
+      },
+      "name": {
+        "type": "text"
+      },
+      "specie": {
+        "type": "text"
+      },
+      "coordinates": {
+        "type": "geo_point"
+      },
+      "unit_id": {
+        "type": "keyword"
+      }
+    }
+  }
+}

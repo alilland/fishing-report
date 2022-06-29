@@ -1,0 +1,6 @@
+log/application.log
+log/application.log.*
+Gemfile.lock
+/tmp/*
+.env.development
+bin/*
