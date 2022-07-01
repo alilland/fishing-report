@@ -15,12 +15,13 @@ namespace :import do
       csv_data = CSV.parse(line, col_sep: ',', headers: false)
       row = csv_data[0]
       hash = { date: row[0], county: row[1], name: row[2], specie: row[3], coordinates: [row[4], row[5]], unit_id: row[6] }
+      hash[:date] = DateTime.strptime(hash[:date], '%m/%d/%Y %H:%M:%S %p')
 
-      location = FR::Location.where(unit_id: hash[:unit_id]).first
+      location = FR::Location.where(unit_id: hash[:unit_id], date: hash[:date]).first
       location = FR::Location.new if location.nil?
 
       location.state = 'CA'
-      location.date = DateTime.strptime(hash[:date], '%m/%d/%Y %H:%M:%S %p')
+      location.date = hash[:date]
       location.county = hash[:county]
       location.name = hash[:name]
       location.specie = hash[:specie]
