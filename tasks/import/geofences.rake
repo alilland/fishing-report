@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 namespace :import do
+  ##
   task :geofences do |tn|
     log :debug, tn, 'start'
 

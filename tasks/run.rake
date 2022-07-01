@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 task run: [
-  'download:fishing_report',
-  'import:fishing_report',
+  'states:california:download',
+  'states:california:import',
   'notifications:interests'
 ] do
 end
