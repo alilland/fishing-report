@@ -5,7 +5,7 @@ namespace :states do
   namespace :california do
     ##
     task :download do |tn|
-      log :debug, tn, 'started'
+      log :debug, tn, 'start'
 
       ## use mechanize gem to browse the webpage and click the export link we need
       agent = Mechanize.new
